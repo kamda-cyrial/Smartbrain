@@ -75,7 +75,7 @@ class App extends Component {
   }
 
   reinit = () =>{
-    this.setState({
+    this.setState({ 
      input:'',
      imageurl:'https://lh4.googleusercontent.com/-S_MG-rh-sFc/TXLFEs_nc6I/AAAAAAAAA4A/Q4PNEr9LRFA/s1600/Fashion+Faces+%2526+Fashion+Styles+%25282%2529.jpg',
      box:[{bottomrow: 244.09213840999996,
@@ -139,7 +139,7 @@ class App extends Component {
   }
   displayFaceBox = (box) => {
     this.setState({box:box});
-    console.log(this.state.box);
+    console.log("cyrial",this.state.box);
   }
  oninputchange = (event)=>{
    this.setState({input:event.target.value});
@@ -165,7 +165,8 @@ console.log(event.target.value);
           name:this.state.user.name,
           email:this.state.user.email,
           password:this.state.user.password,
-          entries: count,
+          rank: count.rank,
+          entries:count.entries,
           joined: this.state.user.joined
         }
         this.setState({user:dataq});
